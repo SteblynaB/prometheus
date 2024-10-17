@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "Введите SERVER_IP: " SERVER_IP
+SERVER_IP=$(hostname -I | awk '{print $1}')
 read -p "Введите SERVER_NAME: " SERVER_NAME
 
 ssh root@65.109.134.69 << EOF

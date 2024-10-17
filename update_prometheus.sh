@@ -3,7 +3,7 @@
 SERVER_IP=$(hostname -I | awk '{print $1}')
 read -p "Введите SERVER_NAME: " SERVER_NAME
 
-ssh root@65.109.134.69 << EOF
+sshpass -p 'eiwfhiwue2344' ssh -o StrictHostKeyChecking=no root@65.109.134.69 << EOF
 {
   echo "      - targets:"
   echo "          - '$SERVER_IP:9100'"
